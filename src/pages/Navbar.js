@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from "../images/logo.png"
 import { Link, Route, Switch } from 'react-router-dom';
 import About from './About';
@@ -11,8 +11,16 @@ import Page from './Page';
 import Color from './Color';
 import { useGlobal } from '../context';
 import { useLocation } from 'react-router-dom';
+import { FaBars } from "react-icons/fa"
 const Navbar = () => {
     const { links } = useGlobal()
+    const [isShow, setIsShow] = useState(null)
+
+    window.addEventListener("resize", e => {
+        if (window.innerWidth > 756) {
+            setIsShow(null)
+        }
+    })
     return (
         <>
             <header className={useLocation().pathname == "/" ? "home" : 'other'} >
@@ -21,7 +29,10 @@ const Navbar = () => {
                     <img src={logo} alt="logo.png" className="img-fluid" />
 
                 </div>
-                <div className="nav">
+                <div className="toggle">
+                    <FaBars className="icon" onClick={() => setIsShow(!isShow)} />
+                </div>
+                <div className={isShow ? "navb navb-links" : "navb"}>
                     <ul>
                         {
                             links.map(link => {

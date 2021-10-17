@@ -132,12 +132,9 @@ header {
     left: 0;
     z-index: 999999;
     display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -ms-flex-align: center;
-    align-items: center;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
 
     .logo {
         @include flex();
@@ -149,13 +146,88 @@ header {
         }
     }
 
-    .nav {
-        all: initial;
-        padding: var(--space);
+    .toggle {
+        @media screen and (min-width:756px) {
+            display: none;
+        }
+
+        .icon {
+            font-size: 2rem;
+            color: #fff;
+        }
+    }
+
+    .navb.navb-links {
+        background: dodgerblue;
+        display: flex;
+        height: auto;
+        grid-column: 1/-1;
+        transform: translateX(0%);
+        transition: all 0.3s linear;
+        position: absolute;
+        top: 92px;
+        left: 0;
+
 
 
         ul {
-            all: initial;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: .5rem;
+            padding: 1rem;
+
+            li {
+                padding: .5rem;
+
+                a {
+                    font-family: var(--quicksand);
+                }
+            }
+        }
+    }
+
+
+
+    .navb {
+
+        padding: var(--space);
+        transition: all 0.3s linear;
+
+        @media screen and (max-width:756px) {
+            position: absolute;
+            left: 0;
+            top: 92px;
+            transform: translateX(-100%);
+            flex-direction: column;
+            width: 80%;
+
+            @media screen and (max-width:567px) {
+                width: 100%;
+            }
+
+
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: .5rem;
+                padding: 1rem;
+
+                li {
+                    padding: .5rem;
+
+                    a {
+                        font-family: var(--quicksand);
+                    }
+                }
+            }
+        }
+
+        ul {
+
             list-style: none;
 
             @include flex();
@@ -488,8 +560,8 @@ section.hero {
 
     display: grid;
 
-    @media screen and (min-width:567px) {
-        grid-template-columns: repeat(2, minmax(500px, 1fr));
+    @media screen and (min-width:756px) {
+        grid-template-columns: repeat(2, minmax(370px, 1fr));
         place-items: center;
     }
 
