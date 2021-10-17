@@ -546,6 +546,7 @@ section.hero {
     min-height: 90vh;
     position: relative;
     padding: 1rem;
+    display: grid;
 
     &::before {
         content: "";
@@ -558,10 +559,9 @@ section.hero {
                 rgba(86, 86, 179, 0.616), rgb(83, 189, 83));
     }
 
-    display: grid;
 
     @media screen and (min-width:756px) {
-        grid-template-columns: repeat(2, minmax(370px, 1fr));
+        grid-template-columns: repeat(2, minmax(500px, 1fr));
         place-items: center;
     }
 

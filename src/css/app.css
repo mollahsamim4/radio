@@ -394,7 +394,7 @@ section.hero {
     background: linear-gradient(to right, #cf50cf, rgba(151, 123, 71, 0.356), rgba(86, 86, 179, 0.616), #53bd53); }
   @media screen and (min-width: 756px) {
     section.hero {
-      grid-template-columns: repeat(2, minmax(370px, 1fr));
+      grid-template-columns: repeat(2, minmax(500px, 1fr));
       place-items: center; } }
   section.hero .hero-info {
     z-index: 999;
