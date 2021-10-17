@@ -145,10 +145,10 @@ const SingleRadio = (props) => {
     return (
         <div className="radio" >
             <div className="imgContainer">
-                <img src={favicon ?? radioBg} alt={name} className="img-fluid" />
+                <img src={favicon || radioBg} alt={name} className="img-fluid" />
                 <button className="playBtn" onClick={() => playRadio(urlResolved)}>
                     {
-                        play ? <FaRegPlayCircle /> : <FaRegPauseCircle />
+                        play ? <FaRegPlayCircle className="icon" /> : <FaRegPauseCircle className="icon" />
                     }
                 </button>
             </div>

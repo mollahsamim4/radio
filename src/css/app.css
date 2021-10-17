@@ -494,10 +494,19 @@ section.hero {
       .radioContainer .radio .imgContainer .playBtn {
         position: absolute;
         border: none;
-        padding: .5rem 1.5rem;
+        /* padding: .5rem 1.5rem; */
         border-radius: 4px;
-        background: #58514f;
-        color: #fff; }
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #9f8a8a; }
+        .radioContainer .radio .imgContainer .playBtn .icon {
+          font-size: 3rem;
+          border-radius: 50%;
+          background: #fff; }
     .radioContainer .radio .radioBottom {
       display: flex;
       justify-content: space-around;
