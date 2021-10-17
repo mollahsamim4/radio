@@ -117,7 +117,7 @@ header {
     font-size: 2rem;
     color: #fff; }
   header .navb.navb-links {
-    background: dodgerblue;
+    background: #4C4C4C;
     display: flex;
     height: auto;
     grid-column: 1/-1;
@@ -142,6 +142,7 @@ header {
     transition: all 0.3s linear; }
     @media screen and (max-width: 756px) {
       header .navb {
+        background: #4C4C4C;
         position: absolute;
         left: 0;
         top: 92px;
