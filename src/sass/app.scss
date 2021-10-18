@@ -154,6 +154,7 @@ header {
         .icon {
             font-size: 2rem;
             color: #fff;
+            cursor: pointer;
         }
     }
 
@@ -677,7 +678,8 @@ section.hero {
 // Radio Container
 .radioContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
     grid-gap: 1rem;
     gap: 1rem;
     width: 100%;
@@ -737,6 +739,7 @@ section.hero {
         z-index: 1;
         background: #fff;
         border-radius: 4px;
+        position: relative;
 
         .imgContainer {
             width: 100%;
@@ -744,10 +747,12 @@ section.hero {
             position: relative;
             @include flex();
             overflow: hidden;
+            border-radius: 4px;
 
             img {
                 object-fit: cover;
                 max-width: 100%;
+                height: 100%;
             }
 
             .playBtn {
@@ -778,7 +783,10 @@ section.hero {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            height: 30%;
+            // height: 30%;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
             flex-wrap: wrap;
             background: var(--mainGrey);
             border-radius: 4px;
@@ -810,4 +818,23 @@ section.hero {
     height: 5px;
     background: coral;
     margin: 0 auto;
+}
+
+.error {
+    @include flex();
+    grid-column: 1/-1;
+
+    h1 {
+        text-align: center;
+        color: chocolate;
+        font-size: 4rem;
+        font-family: var(--playboy);
+    }
+}
+
+.loading {
+    img {
+        max-width: 100%;
+        height: 100px;
+    }
 }

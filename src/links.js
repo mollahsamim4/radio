@@ -5,7 +5,7 @@ const links = [
     { id: 4, name: "Reservation", path: "/reservation" },
     { id: 5, name: "Radio", path: "/radio" },
     { id: 6, name: "Page", path: "/page" },
-    { id: 7, name: "Contact", path: "/contact" },
+    { id: 7, name: "New Contact", path: "/contact" },
 
 ]
 

@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import logo from "../images/logo.png"
 import { Link, Route, Switch } from 'react-router-dom';
 import About from './About';
-
-import Reservation from './Reservation';
 import Radio from './Radio';
+import Reservation from './Reservation';
+
 import Contact from './Contact';
 import Home from './Home';
 import Page from './Page';

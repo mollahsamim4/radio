@@ -115,7 +115,8 @@ header {
       display: none; } }
   header .toggle .icon {
     font-size: 2rem;
-    color: #fff; }
+    color: #fff;
+    cursor: pointer; }
   header .navb.navb-links {
     background: #4C4C4C;
     display: flex;
@@ -479,7 +480,8 @@ section.hero {
 
 .radioContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
   grid-gap: 1rem;
   gap: 1rem;
   width: 100%;
@@ -524,7 +526,8 @@ section.hero {
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
     z-index: 1;
     background: #fff;
-    border-radius: 4px; }
+    border-radius: 4px;
+    position: relative; }
     .radioContainer .radio .imgContainer {
       width: 100%;
       height: 70%;
@@ -535,10 +538,12 @@ section.hero {
       justify-content: center;
       -ms-flex-align: center;
       align-items: center;
-      overflow: hidden; }
+      overflow: hidden;
+      border-radius: 4px; }
       .radioContainer .radio .imgContainer img {
         object-fit: cover;
-        max-width: 100%; }
+        max-width: 100%;
+        height: 100%; }
       .radioContainer .radio .imgContainer .playBtn {
         position: absolute;
         border: none;
@@ -559,7 +564,9 @@ section.hero {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      height: 30%;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
       flex-wrap: wrap;
       background: var(--mainGrey);
       border-radius: 4px; }
@@ -585,3 +592,21 @@ section.hero {
   height: 5px;
   background: coral;
   margin: 0 auto; }
+
+.error {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-column: 1/-1; }
+  .error h1 {
+    text-align: center;
+    color: chocolate;
+    font-size: 4rem;
+    font-family: var(--playboy); }
+
+.loading img {
+  max-width: 100%;
+  height: 100px; }
